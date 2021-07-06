@@ -1,5 +1,5 @@
 # icake_backend
-Desarrollamos el siguiente repositorio con el fin de guardar y hacer seguimiento de los archivos correspondientes para la realización del proyecto icake para el ciclo 4 de desarrollo web del proyecto minTIC2022.
+Desarrollamos el siguiente repositorio con el fin de guardar y hacer seguimiento de los archivos correspondientes para la realización del proyecto iCake para el ciclo 4 de desarrollo web del proyecto minTIC2022.
 
 # Tenemos en cuenta que el desarrollo del repositorio se lleva a cabo por los estudiantes del grupo 3 de la clase W1.
 
@@ -37,3 +37,6 @@ El sitio web contará con un módulo paso a paso para armar el pedido y al final
 3. Presentar el Product Backlog. El Product Backlog es una lista que recoge todo lo que necesita el producto para satisfacer las necesidades del cliente.
  
  https://sharing.clickup.com/l/h/2zu12-115/c9fbaeb2792764c
+
+# Link del repositorio del frontend del proyecto
+https://github.com/mr95david/icake_Frontend
