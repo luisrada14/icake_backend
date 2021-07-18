@@ -1,0 +1,15 @@
+<form (submit)="onAddPost(postForm)" #postForm="ngForm">
+  <mat-form-field>
+    <input matInput type="text" name="title" ngModel title="ngModel" placeholder="Title"required/><!--<mat-error *ngIf="title.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" name="summary" ngModel summary="ngModel" placeholder="Summary"/>
+  </mat-form-field>
+<mat-form-field>
+  <textarea matInput name="content" ngModel content="ngModel"placeholder="Description"required></textarea>
+</mat-form-field>
+<button mat-raised-button color="primary" type="submit">Guardar</button>
+</form>
+
+
+
