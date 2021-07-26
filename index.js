@@ -1,2 +1,8 @@
-console.log('Página en construcción');
-alert('Página en construcción')
+var app = require("./app");
+var mongoose = require("./src/conexDB/conn");
+
+var port = 4000;
+
+app.listen(port, () => {
+  console.log("servidor corriendo");
+});

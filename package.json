@@ -1,0 +1,40 @@
+{
+  "name": "icake_backend",
+  "version": "1.0.0",
+  "description": "Backend del proyecto iCake ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisrada14/icake_backend.git"
+  },
+  "keywords": [
+    "pedido",
+    "torta",
+    "iCake"
+  ],
+  "author": "iCake team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luisrada14/icake_backend/issues"
+  },
+  "homepage": "https://github.com/luisrada14/icake_backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.3",
+    "mongoose-pagination": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
