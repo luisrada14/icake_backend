@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var ClienteSchema = Schema({
   nombre: { type: String },
-  _id: { type: String, default: "tu fucking cedula" },
+  _id: { type: String, default: "0" },
   direccion: { type: String },
   celular: { type: String },
 });
