@@ -6,6 +6,7 @@ var ProductoSchema = Schema({
   sabor_torta: { type: mongoose.Schema.Types.ObjectId, ref: "sabor" }, //sabor
   tamano_torta: { type: mongoose.Schema.Types.ObjectId, ref: "tamano" }, //tamaño
   cobertura_torta: { type: mongoose.Schema.Types.ObjectId, ref: "cobertura" }, //cobertura
+  precio_total: { type: Number },
 });
 
 const Producto = mongoose.model("producto", PedidoSchema); //siempre colocar el nombre de la coleccion en minusc. Mongo agrega una s.
