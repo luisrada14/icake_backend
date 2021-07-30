@@ -7,6 +7,7 @@ var controllerTamano = require("../controllers/ControllerTamano");
 var controllerEstado = require("../controllers/ControllerEstado");
 var controllerSabor = require("../controllers/ControllerSabor");
 
+router.get("/", controllerCliente.home);
 router.post("/crearCliente", controllerCliente.crearCliente);
 router.get("/coberturas", controllerCobertura);
 router.get("/tamanos", controllerTamano);

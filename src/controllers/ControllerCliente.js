@@ -1,9 +1,9 @@
 const Cliente = require("../models/cliente");
 const jwt = require("jsonwebtoken");
 
-function prueba(req, res) {
+function home(req, res) {
   res.status(200).send({
-    message: "probando esta cuestion",
+    message: "Bienvenid@ a la API de iCake 🎂",
   });
 }
 
@@ -51,4 +51,4 @@ function loginCliente(req, res) {
     });
 }
 
-module.exports = { prueba, crearCliente, loginCliente };
+module.exports = { home, crearCliente, loginCliente };
