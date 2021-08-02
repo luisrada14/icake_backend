@@ -32,7 +32,7 @@ router.get("/pedido/estados", controllerEstado);
 router.get("/producto/sabores", controllerSabor);
 router.post("/cliente/login", controllerCliente.loginCliente);
 router.post("/admin/login", controllerAdmin.loginAdmin);
-router.post("/admin", controllerAdmin.crearAdmin);
+router.post("/admin", controllerAdmin.registroAdmin);
 
 
 module.exports = router;
