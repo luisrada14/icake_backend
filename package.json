@@ -6,8 +6,7 @@
   "scripts": {
 "start": "serve -s build",
 "build": "react-scripts build",
-"test": "react-scripts test --env=jsdom",
-"eject": "react-scripts eject"
+"test": "react-scripts test --env=jsdom"
 },
   "repository": {
     "type": "git",
