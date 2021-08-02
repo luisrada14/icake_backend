@@ -4,18 +4,18 @@ const jwt = require("jsonwebtoken");
 function home(req, res) {
   res.status(200).send({
     message: "Bienvenid@ a la API de iCake 🎂",
-    metodos: [
-      {
-        url: "/",
-        descripcion: "",
-        body: {
-          nombre: "string",
-          correo: "string",
-        },
-        params: null,
-        headers: "mandar el token",
-      },
-    ],
+    // metodos: [
+    //   {
+    //     url: "/",
+    //     descripcion: "",
+    //     body: {
+    //       nombre: "string",
+    //       correo: "string",
+    //     },
+    //     params: null,
+    //     headers: "mandar el token",
+    //   },
+    // ],
   });
 }
 
