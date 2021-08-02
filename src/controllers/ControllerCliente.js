@@ -4,6 +4,18 @@ const jwt = require("jsonwebtoken");
 function home(req, res) {
   res.status(200).send({
     message: "Bienvenid@ a la API de iCake 🎂",
+    metodos: [
+      {
+        url: "/",
+        descripcion: "",
+        body: {
+          nombre: "string",
+          correo: "string",
+        },
+        params: null,
+        headers: "mandar el token",
+      },
+    ],
   });
 }
 
@@ -51,4 +63,26 @@ function loginCliente(req, res) {
     });
 }
 
-module.exports = { home, crearCliente, loginCliente };
+function consultarCliente(req, res) {
+  Cliente.findById(req.params.id).then((cliente) => {
+    if (cliente) {
+      res.status(200).json(cliente);
+    } else {
+      res.status(404).json({ message: "cliente no encontrado" });
+    }
+  });
+}
+
+function consultarClientes(req, res) {
+  Cliente.find().then((response) => {
+    res.status(200).json(response);
+  });
+}
+
+module.exports = {
+  home,
+  crearCliente,
+  loginCliente,
+  consultarCliente,
+  consultarClientes,
+};
