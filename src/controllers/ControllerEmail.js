@@ -13,7 +13,7 @@ function enviarEmail(req, res) {
   const mailOptions = {
     from: req.body.email,
     to: "icakecontact@gmail.com",
-    subject: `Mensaje de ${req.body.nombre}. Contáctame a ${req.body.celular}`,
+    subject: `Mensaje de ${req.body.nombre}. Contactar a ${req.body.celular}`,
     text: req.body.mensaje,
   };
 
