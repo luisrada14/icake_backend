@@ -30,4 +30,18 @@ function consultarPedido(req, res) {
   });
 }
 
-module.exports = { crearPedido, consultarPedidos, consultarPedido };
+function editarEstadoPedidobyId(req, res) {
+  Pedido.findByIdAndUpdate(req.params.id, {
+    estado_envio: req.body.estado_envio,
+  }).then((response) => {
+    res.status(200).json({ message: "pedido actualizado" });
+    e;
+  });
+}
+
+module.exports = {
+  crearPedido,
+  consultarPedidos,
+  consultarPedido,
+  editarEstadoPedidobyId,
+};

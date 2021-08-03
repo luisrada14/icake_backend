@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const router = Router();
-const checkAuthAdmin = require("../../middleware/check-auth-admin");
+// const checkAuthAdmin = require("../../middleware/check-auth-admin");
+const checkAuthAdmin = require("../../middleware/check-auth");
 const checkAuth = require("../../middleware/check-auth");
 
 var controllerCliente = require("../controllers/ControllerCliente");
@@ -11,6 +12,7 @@ var controllerSabor = require("../controllers/ControllerSabor");
 var controllerPedido = require("../controllers/ControllerPedido");
 var controllerProducto = require("../controllers/ControllerProducto");
 var controllerAdmin = require("../controllers/ControllerAdmin");
+var controllerEmail = require('../controllers/ControllerEmail');
 
 router.get("/", controllerCliente.home);
 router.post("/cliente", controllerCliente.crearCliente);
@@ -20,8 +22,7 @@ router.post("/producto", controllerProducto.crearProducto);
 router.get("/producto", checkAuthAdmin, controllerProducto.consultarProductos);
 router.get(
   "/producto/:id",
-  checkAuthAdmin,
-  controllerProducto.consultarProductos
+  controllerProducto.consultarProducto
 );
 router.get("/producto/coberturas", controllerCobertura);
 router.get("/producto/tamanos", controllerTamano);
@@ -33,6 +34,6 @@ router.get("/producto/sabores", controllerSabor);
 router.post("/cliente/login", controllerCliente.loginCliente);
 router.post("/admin/login", controllerAdmin.loginAdmin);
 router.post("/admin", controllerAdmin.registroAdmin);
-
-
+router.put('/pedido/:id',checkAuthAdmin,controllerPedido.editarEstadoPedidobyId);
+router.post('/enviarEmail', controllerEmail);
 module.exports = router;
