@@ -15,25 +15,22 @@ var controllerAdmin = require("../controllers/ControllerAdmin");
 var controllerEmail = require('../controllers/ControllerEmail');
 
 router.get("/", controllerCliente.home);
-router.post("/cliente", controllerCliente.crearCliente);
-router.get("/cliente", checkAuthAdmin, controllerCliente.consultarClientes);
+router.post("/crearCliente", controllerCliente.crearCliente);
+router.get("/clientes", checkAuthAdmin, controllerCliente.consultarClientes);
 router.get("/cliente/:id", checkAuthAdmin, controllerCliente.consultarCliente);
-router.post("/producto", controllerProducto.crearProducto);
-router.get("/producto", checkAuthAdmin, controllerProducto.consultarProductos);
-router.get(
-  "/producto/:id",
-  controllerProducto.consultarProducto
-);
-router.get("/producto/coberturas", controllerCobertura);
-router.get("/producto/tamanos", controllerTamano);
-router.post("/pedido", checkAuth, controllerPedido.crearPedido);
-router.get("/pedido", checkAuthAdmin, controllerPedido.consultarPedidos);
+router.post("/crearProducto", controllerProducto.crearProducto);
+router.get("/productos", checkAuthAdmin, controllerProducto.consultarProductos);
+router.get("/producto/:id", controllerProducto.consultarProducto);
+router.get("/coberturas", controllerCobertura);
+router.get("/tamanos", controllerTamano);
+router.post("/pedidos", checkAuth, controllerPedido.crearPedido);
+router.get("/pedidos", checkAuthAdmin, controllerPedido.consultarPedidos);
 router.get("/pedido/:id", checkAuthAdmin, controllerPedido.consultarPedido);
-router.get("/pedido/estados", controllerEstado);
-router.get("/producto/sabores", controllerSabor);
+router.get("/estadosPedido", controllerEstado);
+router.get("/sabores", controllerSabor);
 router.post("/cliente/login", controllerCliente.loginCliente);
 router.post("/admin/login", controllerAdmin.loginAdmin);
-router.post("/admin", controllerAdmin.registroAdmin);
+router.post("/registroAdmin", controllerAdmin.registroAdmin);
 router.put('/pedido/:id',checkAuthAdmin,controllerPedido.editarEstadoPedidobyId);
 router.post('/enviarEmail', controllerEmail);
 module.exports = router;
