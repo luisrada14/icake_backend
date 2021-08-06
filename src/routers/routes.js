@@ -25,7 +25,7 @@ router.get("/coberturas", controllerCobertura);
 router.get("/tamanos", controllerTamano);
 router.post("/pedidos", checkAuth, controllerPedido.crearPedido);
 router.get("/pedidos", checkAuthAdmin, controllerPedido.consultarPedidos);
-router.get("/pedido/:id", checkAuthAdmin, controllerPedido.consultarPedido);
+router.get("/pedido/:id", controllerPedido.consultarPedido);
 router.get("/estadosPedido", controllerEstado);
 router.get("/sabores", controllerSabor);
 router.post("/cliente/login", controllerCliente.loginCliente);
